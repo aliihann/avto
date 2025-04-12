@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>АвтоЛюкс | Премиальный прокат автомобилей</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <i class="fas fa-car"></i>
+          <h1>Авто<span>Люкс</span></h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#hero">Главная</a></li>
+          <li><a href="#cars">Автомобили</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#pricing">Тарифы</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <div class="theme-toggle">
+          <i class="fas fa-sun"></i>
+          <label class="switch">
+            <input type="checkbox" id="theme-switch">
+            <span class="slider round"></span>
+          </label>
+          <i class="fas fa-moon"></i>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Премиальные авто<br>для ваших поездок</h1>
+        <p>Широкий выбор автомобилей бизнес и премиум класса для любых мероприятий и поездок. Безупречный сервис и индивидуальный подход к каждому клиенту.</p>
+        <div class="cta-buttons">
+          <a href="#cars" class="btn primary">Выбрать автомобиль</a>
+          <a href="#contact" class="btn secondary">Получить консультацию</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="container">
+    <div class="booking-box">
+      <h2>Забронировать автомобиль</h2>
+      <form class="booking-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="car-type">Класс автомобиля</label>
+            <select id="car-type">
+              <option value="">Выберите класс</option>
+              <option value="economy">Эконом</option>
+              <option value="business">Бизнес</option>
+              <option value="premium">Премиум</option>
+              <option value="suv">Внедорожник</option>
+              <option value="sport">Спорткар</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pickup-date">Дата получения</label>
+            <input type="date" id="pickup-date">
+          </div>
+          <div class="form-group">
+            <label for="return-date">Дата возврата</label>
+            <input type="date" id="return-date">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pickup-location">Место получения</label>
+            <select id="pickup-location">
+              <option value="">Выберите место</option>
+              <option value="office">Наш офис</option>
+              <option value="airport">Аэропорт</option>
+              <option value="address">Адрес клиента</option>
+              <option value="station">Ж/Д вокзал</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="return-location">Место возврата</label>
+            <select id="return-location">
+              <option value="">Выберите место</option>
+              <option value="office">Наш офис</option>
+              <option value="airport">Аэропорт</option>
+              <option value="address">Адрес клиента</option>
+              <option value="station">Ж/Д вокзал</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn primary full-width">Поиск доступных авто</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="cars" class="container">
+    <div class="section-header">
+      <h2>Наш автопарк</h2>
+      <p>Выберите автомобиль для вашей поездки из нашей премиальной коллекции</p>
+    </div>
+    
+    <div class="car-filter">
+      <button class="filter-btn active" data-filter="all">Все</button>
+      <button class="filter-btn" data-filter="business">Бизнес</button>
+      <button class="filter-btn" data-filter="premium">Премиум</button>
+      <button class="filter-btn" data-filter="suv">Внедорожники</button>
+      <button class="filter-btn" data-filter="sport">Спорткары</button>
+    </div>
+    
+    <div class="cars-grid">
+      <div class="car-card" data-category="business">
+        <div class="car-image">
+          <img src="https://images.unsplash.com/photo-1546614042-7df3c24c9e5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=350&q=80" alt="Mercedes E-Class">
+          <span class="car-label">Бизнес</span>
+        </div>
+        <div class="car-details">
+          <h3>BMW 5 Series</h3>
+          <div class="car-features">
+            <span><i class="fas fa-cog"></i> Автомат</span>
+            <span><i class="fas fa-gas-pump"></i> Дизель</span>
+            <span><i class="fas fa-user"></i> 5 мест</span>
+          </div>
+          <p class="car-description">Комфортный седан бизнес-класса с кожаным салоном, климат-контролем и передовыми системами безопасности.</p>
+          <div class="car-footer">
+            <div class="car-price">
+              <span class="price-value">6 000 ₽</span>
+              <span class="price-period">/ день</span>
+            </div>
+            <a href="#booking" class="btn primary small">Забронировать</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="car-card" data-category="premium">
+        <div class="car-image">
+          <img src="https://avatars.mds.yandex.net/i?id=7a76918043d67799b10202e468911c62_l-9840106-images-thumbs&n=13" alt="BMW 7 Series">
+          <span class="car-label">Премиум</span>
+        </div>
+        <div class="car-details">
+          <h3>BMW 7 Series</h3>
+          <div class="car-features">
+            <span><i class="fas fa-cog"></i> Автомат</span>
+            <span><i class="fas fa-gas-pump"></i> Бензин</span>
+            <span><i class="fas fa-user"></i> 5 мест</span>
+          </div>
+          <p class="car-description">Роскошный седан представительского класса с инновационными технологиями и максимальным комфортом.</p>
+          <div class="car-footer">
+            <div class="car-price">
+              <span class="price-value">12 000 ₽</span>
+              <span class="price-period">/ день</span>
+            </div>
+            <a href="#booking" class="btn primary small">Забронировать</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="car-card" data-category="suv">
+        <div class="car-image">
+          <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=350&q=80" alt="Range Rover Sport">
+          <span class="car-label">Внедорожник</span>
+        </div>
+        <div class="car-details">
+          <h3>Range Rover Sport</h3>
+          <div class="car-features">
+            <span><i class="fas fa-cog"></i> Автомат</span>
+            <span><i class="fas fa-gas-pump"></i> Дизель</span>
+            <span><i class="fas fa-user"></i> 5 мест</span>
+          </div>
+          <p class="car-description">Мощный и комфортабельный внедорожник премиум-класса с полным приводом и высоким клиренсом.</p>
+          <div class="car-footer">
+            <div class="car-price">
+              <span class="price-value">15 000 ₽</span>
+              <span class="price-period">/ день</span>
+            </div>
+            <a href="#booking" class="btn primary small">Забронировать</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="car-card" data-category="sport">
+        <div class="car-image">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=350&q=80" alt="Porsche 911">
+          <span class="car-label">Спорткар</span>
+        </div>
+        <div class="car-details">
+          <h3>Porsche 911</h3>
+          <div class="car-features">
+            <span><i class="fas fa-cog"></i> Автомат</span>
+            <span><i class="fas fa-gas-pump"></i> Бензин</span>
+            <span><i class="fas fa-user"></i> 2 места</span>
+          </div>
+          <p class="car-description">Легендарный спортивный автомобиль с непревзойденной управляемостью и динамикой разгона.</p>
+          <div class="car-footer">
+            <div class="car-price">
+              <span class="price-value">25 000 ₽</span>
+              <span class="price-period">/ день</span>
+            </div>
+            <a href="#booking" class="btn primary small">Забронировать</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="car-card" data-category="business">
+        <div class="car-image">
+          <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=350&q=80" alt="Audi A6">
+          <span class="car-label">Бизнес</span>
+        </div>
+        <div class="car-details">
+          <h3>Mercedes 6.3 AMG GT</h3>
+          <div class="car-features">
+            <span><i class="fas fa-cog"></i> Автомат</span>
+            <span><i class="fas fa-gas-pump"></i> Дизель</span>
+            <span><i class="fas fa-user"></i> 5 мест</span>
+          </div>
+          <p class="car-description">Элегантный седан бизнес-класса с высокотехнологичным салоном и превосходной динамикой.</p>
+          <div class="car-footer">
+            <div class="car-price">
+              <span class="price-value">7 000 ₽</span>
+              <span class="price-period">/ день</span>
+            </div>
+            <a href="#booking" class="btn primary small">Забронировать</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="car-card" data-category="suv">
+        <div class="car-image">
+          <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=350&q=80" alt="Mercedes GLE">
+          <span class="car-label">Внедорожник</span>
+        </div>
+        <div class="car-details">
+          <h3>Honda</h3>
+          <div class="car-features">
+            <span><i class="fas fa-cog"></i> Автомат</span>
+            <span><i class="fas fa-gas-pump"></i> Дизель</span>
+            <span><i class="fas fa-user"></i> 5 мест</span>
+          </div>
+          <p class="car-description">Комфортабельный внедорожник с просторным салоном, богатым оснащением и мощным двигателем.</p>
+          <div class="car-footer">
+            <div class="car-price">
+              <span class="price-value">13 000 ₽</span>
+              <span class="price-period">/ день</span>
+            </div>
+            <a href="#booking" class="btn primary small">Забронировать</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="view-all">
+      <a href="#" class="btn primary">Смотреть все автомобили</a>
+    </div>
+  </section>
+
+  <section id="services" class="container">
+    <div class="section-header">
+      <h2>Наши услуги</h2>
+      <p>Мы предлагаем полный комплекс услуг для вашего комфорта</p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-car"></i>
+        <h3>Аренда без водителя</h3>
+        <p>Возьмите автомобиль в аренду и наслаждайтесь поездкой в своем темпе без ограничений.</p>
+      </div>
+      
+      <div class="service-card">
+        <i class="fas fa-user-tie"></i>
+        <h3>Аренда с водителем</h3>
+        <p>Профессиональные водители с многолетним опытом и знанием города обеспечат вам комфортную поездку.</p>
+      </div>
+      
+      <div class="service-card">
+        <i class="fas fa-rings-wedding"></i>
+        <h3>Авто на свадьбу</h3>
+        <p>Сделайте ваш особенный день еще более запоминающимся с нашими элегантными автомобилями.</p>
+      </div>
+      
+      <div class="service-card">
+        <i class="fas fa-suitcase-rolling"></i>
+        <h3>Трансфер из аэропорта</h3>
+        <p>Встреча в аэропорту и комфортное перемещение в любую точку города на премиальном автомобиле.</p>
+      </div>
+      
+      <div class="service-card">
+        <i class="fas fa-calendar-day"></i>
+        <h3>Долгосрочная аренда</h3>
+        <p>Специальные условия и тарифы для клиентов, нуждающихся в аренде автомобиля на длительный срок.</p>
+      </div>
+      
+      <div class="service-card">
+        <i class="fas fa-building"></i>
+        <h3>Корпоративным клиентам</h3>
+        <p>Индивидуальные условия сотрудничества для компаний с гибкой системой скидок и персональным менеджером.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <div class="section-header left-align">
+          <h2>О компании АвтоЛюкс</h2>
+          <p>Ваш надежный партнер в сфере аренды премиальных автомобилей</p>
+        </div>
+        <p>Компания АвтоЛюкс основана в 2010 году и за это время стала лидером на рынке проката премиальных автомобилей. Наш автопарк насчитывает более 50 автомобилей различных классов от ведущих мировых производителей.</p>
+        <p>Мы специализируемся на предоставлении автомобилей премиум и бизнес-класса для корпоративных клиентов, туристов и частных лиц, ценящих комфорт и безупречный сервис.</p>
+        <ul class="about-features">
+          <li><i class="fas fa-check-circle"></i> Все автомобили в идеальном техническом состоянии</li>
+          <li><i class="fas fa-check-circle"></i> Полная страховка КАСКО для каждого автомобиля</li>
+          <li><i class="fas fa-check-circle"></i> Круглосуточная техническая поддержка</li>
+          <li><i class="fas fa-check-circle"></i> Доставка автомобиля в удобное для вас место</li>
+          <li><i class="fas fa-check-circle"></i> Гибкая система скидок для постоянных клиентов</li>
+        </ul>
+      </div>
+      <div class="about-image">
+        <img src="https://a.d-cd.net/yuAAAgM6auA-960.jpg" alt="Наш автопарк">
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="container">
+    <div class="section-header">
+      <h2>Отзывы клиентов</h2>
+      <p>Что говорят о нас наши клиенты</p>
+    </div>
+    <div class="testimonials-slider">
+      <div class="testimonial-card active">
+        <div class="testimonial-content">
+          <p>"Уже второй раз арендуем автомобиль в АвтоЛюкс для семейной поездки. Машины всегда в идеальном состоянии, оформление быстрое, сервис на высшем уровне. Обязательно будем обращаться еще!"</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Александр Петров">
+          <div>
+            <h4>Александр Петров</h4>
+            <p>Клиент</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>"Брали на свадьбу Mercedes S-Class, остались очень довольны. Автомобиль был безупречно чист и украшен. Водитель приехал вовремя, был вежлив и профессионален. Сервис на 5 звезд!"</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Екатерина Смирнова">
+          <div>
+            <h4>Екатерина Смирнова</h4>
+            <p>Клиент</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>"Наша компания регулярно пользуется услугами АвтоЛюкс для встречи партнеров и трансфера в аэропорт. Всегда пунктуальны, автомобили соответствуют заявленному классу. Рекомендую!"</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Дмитрий Иванов">
+          <div>
+            <h4>Дмитрий Иванов</h4>
+            <p>Корпоративный клиент</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-controls">
+        <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <div class="testimonial-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="container">
+    <div class="section-header">
+      <h2>Тарифы и условия</h2>
+      <p>Прозрачное ценообразование и гибкие условия аренды</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>Стандарт</h3>
+          <div class="pricing-price">
+            <span class="price-value">от 3 000 ₽</span>
+            <span class="price-period">/ день</span>
+          </div>
+        </div>
+        <div class="pricing-body">
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Автомобили бизнес-класса</li>
+            <li><i class="fas fa-check"></i> Неограниченный пробег</li>
+            <li><i class="fas fa-check"></i> Страховка ОСАГО</li>
+            <li><i class="fas fa-check"></i> Техническая поддержка</li>
+            <li><i class="fas fa-times"></i> Страховка КАСКО с франшизой</li>
+            <li><i class="fas fa-times"></i> Доставка автомобиля</li>
+          </ul>
+          <div class="pricing-footer">
+            <a href="#booking" class="btn primary">Забронировать</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pricing-card featured">
+        <div class="pricing-header">
+          <div class="pricing-label">Популярный</div>
+          <h3>Премиум</h3>
+          <div class="pricing-price">
+            <span class="price-value">от 7 000 ₽</span>
+            <span class="price-period">/ день</span>
+          </div>
+        </div>
+        <div class="pricing-body">
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Автомобили премиум-класса</li>
+            <li><i class="fas fa-check"></i> Неограниченный пробег</li>
+            <li><i class="fas fa-check"></i> Страховка ОСАГО и КАСКО</li>
+            <li><i class="fas fa-check"></i> Круглосуточная поддержка</li>
+            <li><i class="fas fa-check"></i> Доставка автомобиля</li>
+            <li><i class="fas fa-check"></i> Дополнительный водитель бесплатно</li>
+          </ul>
+          <div class="pricing-footer">
+            <a href="#booking" class="btn primary">Забронировать</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>Бизнес</h3>
+          <div class="pricing-price">
+            <span class="price-value">от 12 000 ₽</span>
+            <span class="price-period">/ день</span>
+          </div>
+        </div>
+        <div class="pricing-body">
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Автомобили представительского класса</li>
+            <li><i class="fas fa-check"></i> Неограниченный пробег</li>
+            <li><i class="fas fa-check"></i> Полная страховка (ОСАГО + КАСКО)</li>
+            <li><i class="fas fa-check"></i> Персональный менеджер</li>
+            <li><i class="fas fa-check"></i> Профессиональный водитель</li>
+            <li><i class="fas fa-check"></i> Доставка в любую точку города</li>
+          </ul>
+          <div class="pricing-footer">
+            <a href="#booking" class="btn primary">Забронировать</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pricing-note">
+      <p>* Для долгосрочной аренды (от 7 дней) предоставляются специальные условия и скидки до 20%</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="section-header left-align">
+            <h2>Контактная информация</h2>
+            <p>Свяжитесь с нами любым удобным способом</p>
+          </div>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Адрес</h4>
+                <p>г. Москва, ул. Тверская, 22, офис 105</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>Телефон</h4>
+                <p>+7 (495) 123-45-67</p>
+                <p>+7 (901) 123-45-67</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>info@autolux.ru</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h4>Время работы</h4>
+                <p>Пн-Пт: 9:00 - 21:00</p>
+                <p>Сб-Вс: 10:00 - 18:00</p>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="contact-form-container">
+          <h3>Оставьте заявку</h3>
+          <p>Мы свяжемся с вами в ближайшее время</p>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Ваше имя</label>
+              <input type="text" id="name" placeholder="Иван Иванов" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Телефон</label>
+              <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="example@mail.ru">
+            </div>
+            <div class="form-group">
+              <label for="service-select">Услуга</label>
+              <select id="service-select">
+                <option value="">Выберите услугу</option>
+                <option value="rent">Аренда без водителя</option>
+                <option value="driver">Аренда с водителем</option>
+                <option value="wedding">Авто на свадьбу</option>
+                <option value="transfer">Трансфер из аэропорта</option>
+                <option value="long-term">Долгосрочная аренда</option>
+                <option value="corporate">Корпоративное обслуживание</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Сообщение</label>
+              <textarea id="message" placeholder="Ваше сообщение..." rows="4"></textarea>
+            </div>
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="privacy" required>
+              <label for="privacy">Я согласен на обработку персональных данных</label>
+            </div>
+            <button type="submit" class="btn primary">Отправить заявку</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="map">
+    <div class="map-container">
+      <div class="map-placeholder">
+        <h3>Карта расположения офиса</h3>
+        <p>Мы находимся в центре города с удобным подъездом и парковкой</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <i class="fas fa-car"></i>
+          <h3>Авто<span>Люкс</span></h3>
+          <p>Премиальный прокат автомобилей с безупречным сервисом</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Компания</h4>
+            <ul>
+              <li><a href="#hero">Главная</a></li>
+              <li><a href="#about">О нас</a></li>
+              <li><a href="#cars">Автомобили</a></li>
+              <li><a href="#services">Услуги</a></li>
+              <li><a href="#contact">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Услуги</h4>
+            <ul>
+              <li><a href="#">Аренда без водителя</a></li>
+              <li><a href="#">Аренда с водителем</a></li>
+              <li><a href="#">Авто на свадьбу</a></li>
+              <li><a href="#">Трансфер из аэропорта</a></li>
+              <li><a href="#">Долгосрочная аренда</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Контакты</h4>
+            <ul class="contact-list">
+              <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Тверская, 22</li>
+              <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+              <li><i class="fas fa-envelope"></i> info@autolux.ru</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 АвтоЛюкс. Все права защищены.</p>
+        <div class="footer-legal">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Условия использования</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
